@@ -14,6 +14,22 @@ for idx, ch in enumerate(argv_value):
 def clean(s: str) -> str:
     return s.strip().replace("\u00a0", " ")  # remove extra space types
 """
+
+value = sys.argv[1]
+print("From Jenkins:", repr(value))
+print("Length:", len(value))
+
+isp_list = [
+    '5 STAR-BHUBANESHWAR-TATA-ILL-10',
+    '7 STAR-Mumbai-AIRTEL-ILL-100',
+]
+
+for item in isp_list:
+    print(f"Compare with {repr(item)} =>", value == item)
+
+
+
+'''
 name = sys.argv[1]
 
 github_user = os.getenv("GITHUB_USER")
@@ -48,4 +64,4 @@ with UptimeKumaApi(URL) as api:
   api.delete_monitor(id)
   time.sleep(30)
   api.logout()
-
+'''
