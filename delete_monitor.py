@@ -4,7 +4,7 @@ import os
 import sys
 
 def clean(s: str) -> str:
-    return s.strip().lower().replace("\u00a0", " ")  # remove extra space types
+    return s.strip().replace("\u00a0", " ")  # remove extra space types
 
 name = clean(sys.argv[1])
 
