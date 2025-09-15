@@ -3,34 +3,9 @@ import time
 import os
 import sys
 
-"""
-argv_value = sys.argv[1]
-
-print("From Jenkins (repr):", repr(argv_value))
-for idx, ch in enumerate(argv_value):
-    print(idx, ch, ord(ch))
-
-
-def clean(s: str) -> str:
-    return s.strip().replace("\u00a0", " ")  # remove extra space types
-"""
-
-value = sys.argv[1]
-print("From Jenkins:", repr(value))
-print("Length:", len(value))
-
-isp_list = [
-    '5 STAR-BHUBANESHWAR-TATA-ILL-10',
-    '7 STAR-Mumbai-AIRTEL-ILL-100',
-]
-
-for item in isp_list:
-    print(f"Compare with {repr(item)} =>", value == item)
-
-
-
-'''
 name = sys.argv[1]
+print("From Jenkins:", repr(name))
+print("Length:", len(name))
 
 github_user = os.getenv("GITHUB_USER")
 github_pass = os.getenv("GITHUB_PASS")
@@ -50,6 +25,9 @@ with UptimeKumaApi(URL) as api:
     isp_name.append(i.get("name"))
     isp_id.append(i.get("id"))
 
+  for item in isp_name:
+    print(f"Compare with {repr(item)} =>", name == item)
+    
   for i in range(len(isp_name)):
     if name==isp_name[i]:
       
