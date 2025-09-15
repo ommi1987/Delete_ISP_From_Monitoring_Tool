@@ -29,7 +29,7 @@ with UptimeKumaApi(URL) as api:
     print(f"Compare with {repr(item)} =>", name == item)
     
   for i in range(len(isp_name)):
-    if name==isp_name[i]:
+    if name=={repr(isp_name[i])}:
       
       id=isp_id[i]
     else:
