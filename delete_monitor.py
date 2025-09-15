@@ -37,7 +37,8 @@ with UptimeKumaApi(URL) as api:
       print(f"ISP Name is not found in the Monitoring Tool..{sys.argv[1]}. Please double check and run again with exact name..!")
       
 
-  api.delete_monitor(id)
+  api.delete_monitor(id)  
   time.sleep(30)
+  print(f"ISP successfully deleted from the Monitoring Tool..{sys.argv[1]}...!")
   api.logout()
 
