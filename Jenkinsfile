@@ -28,14 +28,14 @@ pipeline {
         withCredentials([usernamePassword(credentialsId: 'ef4fcb76-64f0-4cf0-af29-16e94c03fcd4',
                                           usernameVariable: 'GITHUB_USER',
                                           passwordVariable: 'GITHUB_PASS')]) {
-            sh """
+            sh '''
                 . venv/bin/activate
                 ISP_CLEANED=$(echo "${ISP_NAME}" | xargs)
                 echo "Passing ISP name: [$ISP_CLEANED]"
                 python3 delete_monitor.py "$ISP_CLEANED"
                    
                     
-            """
+            '''
                 }
             }
         }
