@@ -7,7 +7,7 @@ pipeline {
 
     parameters {
         string(name: 'ISP_NAME', defaultValue: '', description: 'Mandatory! Enter ISP Name Configured In Monitoring Tool To Delete..!')
-        #string(name: 'ISP_PUBLIC_IP', defaultValue: '', description: 'Mandatory! Enter ISP Public IP (e.g. 1.2.3.4)')
+        //string(name: 'ISP_PUBLIC_IP', defaultValue: '', description: 'Mandatory! Enter ISP Public IP (e.g. 1.2.3.4)')
     }
 
     stages {
