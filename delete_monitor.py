@@ -3,17 +3,18 @@ import time
 import os
 import sys
 
+"""
 argv_value = sys.argv[1]
 
 print("From Jenkins (repr):", repr(argv_value))
 for idx, ch in enumerate(argv_value):
     print(idx, ch, ord(ch))
 
-"""
+
 def clean(s: str) -> str:
     return s.strip().replace("\u00a0", " ")  # remove extra space types
-
-name = clean(sys.argv[1])
+"""
+name = sys.argv[1]
 
 github_user = os.getenv("GITHUB_USER")
 github_pass = os.getenv("GITHUB_PASS")
@@ -47,4 +48,4 @@ with UptimeKumaApi(URL) as api:
   api.delete_monitor(id)
   time.sleep(30)
   api.logout()
-"""
+
