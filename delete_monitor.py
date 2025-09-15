@@ -3,10 +3,15 @@ import time
 import os
 import sys
 
+def clean(s: str) -> str:
+    return s.strip().lower().replace("\u00a0", " ")  # remove extra space types
+
+name = clean(sys.argv[1])
+
 github_user = os.getenv("GITHUB_USER")
 github_pass = os.getenv("GITHUB_PASS")
 
-name = sys.argv[1]
+#name = sys.argv[1]
 
 isp_name=[]
 isp_id=[]
