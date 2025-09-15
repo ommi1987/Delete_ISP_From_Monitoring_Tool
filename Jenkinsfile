@@ -30,7 +30,7 @@ pipeline {
                                           passwordVariable: 'GITHUB_PASS')]) {
             sh """
                 . venv/bin/activate
-                python test2.py "${ISP_NAME}"  
+                python delete_monitor.py "${ISP_NAME}"  
                     
             """
                 }
