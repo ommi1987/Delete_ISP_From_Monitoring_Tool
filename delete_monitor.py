@@ -25,6 +25,10 @@ with UptimeKumaApi(URL) as api:
     if isp_name[i]==sys.argv[1]:
       id=isp_id[i]
     else:
+      print(sys.argv[1])
+      print(isp_name)
+      print(isp_id)
+      
       print(f"ISP Name is not found in the Monitoring Tool..{sys.argv[1]}. Please double check and run again with exact name..!")
       sys.exit(0)
 
