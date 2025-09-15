@@ -29,13 +29,11 @@ with UptimeKumaApi(URL) as api:
     print(f"Compare with {repr(item)} =>", name == item)
     
   for i in range(len(isp_name)):
-    if name=={repr(isp_name[i])}:
-      
+    if name==isp_name[i]:      
       id=isp_id[i]
     else:
       print(name, isp_name[i])
-      print(isp_id)
-      
+      print(isp_id)      
       print(f"ISP Name is not found in the Monitoring Tool..{sys.argv[1]}. Please double check and run again with exact name..!")
       sys.exit(0)
 
