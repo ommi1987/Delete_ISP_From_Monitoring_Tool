@@ -30,7 +30,10 @@ pipeline {
                                           passwordVariable: 'GITHUB_PASS')]) {
             sh """
                 . venv/bin/activate
-                python delete_monitor.py "${params.ISP_NAME}"     
+                ISP_CLEANED=$(echo "${ISP_NAME}" | xargs)
+                echo "Passing ISP name: [$ISP_CLEANED]"
+                python3 delete_monitor.py "$ISP_CLEANED"
+                   
                     
             """
                 }
