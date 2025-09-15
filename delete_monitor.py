@@ -6,7 +6,7 @@ import sys
 github_user = os.getenv("GITHUB_USER")
 github_pass = os.getenv("GITHUB_PASS")
 
-name = f"{sys.argv[1]}"
+name = sys.argv[1]
 
 isp_name=[]
 isp_id=[]
@@ -22,10 +22,10 @@ with UptimeKumaApi(URL) as api:
     isp_id.append(i.get("id"))
 
   for i in range(len(isp_name)):
-    if isp_name[i]==sys.argv[1]:
+    if name==isp_name[i]:
       id=isp_id[i]
     else:
-      print(sys.argv[1])
+      print(name)
       print(isp_name)
       print(isp_id)
       
