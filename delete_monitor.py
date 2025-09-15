@@ -42,4 +42,4 @@ with UptimeKumaApi(URL) as api:
   api.delete_monitor(id)
   time.sleep(30)
   api.logout()
-'''
+
