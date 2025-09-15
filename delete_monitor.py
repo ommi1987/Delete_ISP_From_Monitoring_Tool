@@ -38,7 +38,7 @@ with UptimeKumaApi(URL) as api:
       
 
   api.delete_monitor(id)  
-  time.sleep(30)
+  #time.sleep(30)
   print(f"ISP successfully deleted from the Monitoring Tool..{sys.argv[1]}...!")
   api.logout()
 
