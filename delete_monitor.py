@@ -6,7 +6,7 @@ import sys
 github_user = os.getenv("GITHUB_USER")
 github_pass = os.getenv("GITHUB_PASS")
 
-name = sys.argv[1]
+name = f"{sys.argv[1]}"
 
 isp_name=[]
 isp_id=[]
